@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --backgroundHeader: hsl(195, 91%, 25%); 
+  --backFormFooter: hsl(195, 46%, 40%);
+  --backgroundBody: hsl(0, 0%, 100%);
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.page {
+  display: grid;
+  grid-template: 
+  "H H H"
+  "M M S"
+  "F F F";
+
+  gap: 3rem;
+}
+
+header {
+  grid-area: H;
+  background-color: var(--backgroundHeader);
+
+  display: flex;
+  align-items: center;
+
+  padding: 1.6rem 3.2rem;
+  gap: 7.2rem;
+}
+
+header form {
+  flex: 1;
+}
+
+.input-wrapper label {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+
+  background-color: var(--backFormFooter);
+  border: none;
+  border-radius:  0.6rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.5;
+  color: white;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+main {
+  grid-area: M;
+  max-width: 80rem;
+  margin: 1.6rem 3.2rem;
+}
+
+main .catKing {
+  max-width: 80rem;
+}
+
+
+main h1 {
+  font-size: 2.4rem;
+  color: #202024;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  margin-top: 3.0rem;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--backgroundHeader);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.tittleButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+main p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #121214;
+  max-width: 80rem;
+}
+
+button:hover {
+  background-color: var(--backFormFooter);
+}
+
+section {
+  grid-area: S;
+  margin: 1.6rem 3.2rem;
+  max-width: 38rem;
+}
+
+section h1 {
+  font-family: 'Mulish', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+  color: #202024;
+}
+
+figure {
+  display: flex;
+  align-items: auto;
+  gap: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+figcaption h2 {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.8rem;
+  columns: #202024;
+  font-weight: 700;
+}
+
+figcaption p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #121214;
+}
+
+
+footer {
+  grid-area: F;
+  background-color: var(--backFormFooter);
+}
+
+footer p {
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+  color: white;
+}
+
+
+@media (max-width: 1370px) {
+  .page {
+    display: grid;
+    grid-template: 
+    "H"
+    "M"
+    "S"
+    "F"
+    ;
+  }
+
+  header {
+    grid-area: H;
+  }
+
+  main {
+    grid-area: M;
+  }
+
+  section {
+    grid-area: S;
+  }
+
+  footer {
+    grid-area: F;
+  }
+}
